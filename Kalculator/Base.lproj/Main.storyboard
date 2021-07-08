@@ -1,24 +1,555 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vyE-8s-X0u">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="MzG-5g-pbn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="vyE-8s-X0u" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wQJ-7p-Hmn"/>
+                        <viewControllerLayoutGuide type="bottom" id="1mu-YL-JTL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cdZ-d5-5hg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KALCULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QH-5k-gDe">
+                                <rect key="frame" x="16" y="76" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="0.1617951393" green="0.55408745999999998" blue="0.86918073890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="tl0-Go-xhG" customClass="JSLabel" customModule="Kalculator" customModuleProvider="target">
+                                <rect key="frame" x="36" y="224.5" width="342" height="44.5"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
+                                <color key="textColor" red="0.1617951393" green="0.55408745999999998" blue="0.86918073890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1617951393" green="0.55408745999999998" blue="0.86918073890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p8s-CQ-WHJ">
+                                <rect key="frame" x="36" y="301" width="342" height="529"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ibh-aC-yfs">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhq-A3-5i9" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IaS-Bt-kfj"/>
+                                                    <constraint firstAttribute="width" constant="50" id="WCy-rY-Ve2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.1617951393" green="0.55408745999999998" blue="0.86918073890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2K-gf-Wbj" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="97.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="WNA-1j-FBT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="DEL">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.1617951393" green="0.55408745999999998" blue="0.86918073890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVG-7a-f9d" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="194.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8fy-GB-pEQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="+-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FC9-Bm-8f1" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="292" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="WoM-X5-8nn"/>
+                                                    <constraint firstAttribute="width" constant="50" id="fPy-Kr-Fq3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gVG-7a-f9d" firstAttribute="height" secondItem="Yhq-A3-5i9" secondAttribute="height" id="CRU-1z-IcU"/>
+                                            <constraint firstItem="gVG-7a-f9d" firstAttribute="width" secondItem="Yhq-A3-5i9" secondAttribute="width" id="KRR-E7-6ab"/>
+                                            <constraint firstItem="L2K-gf-Wbj" firstAttribute="height" secondItem="Yhq-A3-5i9" secondAttribute="height" id="SUI-Uj-Obs"/>
+                                            <constraint firstItem="FC9-Bm-8f1" firstAttribute="height" secondItem="Yhq-A3-5i9" secondAttribute="height" id="VEf-sA-aPv"/>
+                                            <constraint firstAttribute="height" constant="50" id="brh-i7-TZJ"/>
+                                            <constraint firstItem="FC9-Bm-8f1" firstAttribute="width" secondItem="Yhq-A3-5i9" secondAttribute="width" id="he5-iY-sYb"/>
+                                            <constraint firstItem="L2K-gf-Wbj" firstAttribute="width" secondItem="Yhq-A3-5i9" secondAttribute="width" id="yHu-bG-Def"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3Tm-83-goq">
+                                        <rect key="frame" x="0.0" y="120" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vez-cN-DHZ" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="GS3-zM-bDj"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="SVM-b6-1BL"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="aY0-YT-dQO"/>
+                                                    <constraint firstAttribute="width" constant="50" id="jRy-ax-bxV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKe-2N-ClJ" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="97.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="55a-Zg-wUS"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Bo8-1H-L4H"/>
+                                                    <constraint firstAttribute="width" constant="50" id="jVY-jh-4LR"/>
+                                                    <constraint firstAttribute="height" constant="50" id="k3l-iS-8AR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqy-pq-uRs" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="194.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6iO-nL-Sz9"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="70s-Mb-KNF"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="BNJ-61-7DZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="csl-4k-5FG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouv-vH-DBg" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="292" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8Xi-1u-UQ8"/>
+                                                    <constraint firstAttribute="width" constant="50" id="9fk-Ns-rP9"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Yos-B1-9Cv"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="h7T-5P-OJ1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="*">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hqy-pq-uRs" firstAttribute="height" secondItem="Vez-cN-DHZ" secondAttribute="height" id="1Ue-yh-zJ0"/>
+                                            <constraint firstItem="hqy-pq-uRs" firstAttribute="width" secondItem="Vez-cN-DHZ" secondAttribute="width" id="2Mg-89-Vtz"/>
+                                            <constraint firstAttribute="height" constant="50" id="7Me-hQ-FUt"/>
+                                            <constraint firstItem="ouv-vH-DBg" firstAttribute="width" secondItem="Vez-cN-DHZ" secondAttribute="width" id="BnQ-mi-Thk"/>
+                                            <constraint firstItem="FKe-2N-ClJ" firstAttribute="width" secondItem="Vez-cN-DHZ" secondAttribute="width" id="NTI-vG-itT"/>
+                                            <constraint firstItem="ouv-vH-DBg" firstAttribute="height" secondItem="Vez-cN-DHZ" secondAttribute="height" id="Nq0-kI-5eG"/>
+                                            <constraint firstItem="FKe-2N-ClJ" firstAttribute="height" secondItem="Vez-cN-DHZ" secondAttribute="height" id="Vkl-oX-3SA"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F1x-s2-aq5">
+                                        <rect key="frame" x="0.0" y="239.5" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4og-eD-rYS" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Tjs-j0-Iwq"/>
+                                                    <constraint firstAttribute="height" constant="50" id="pEM-aA-LQa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-qH-1pz" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="97.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="C61-uQ-1AB"/>
+                                                    <constraint firstAttribute="width" constant="50" id="Tgl-Ma-VDe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFY-g4-gD3" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="194.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="FH1-7P-FAj"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ORp-yy-O8n"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9U-tM-ll4" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="292" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6D5-b8-rUH"/>
+                                                    <constraint firstAttribute="height" constant="50" id="f1g-SL-SHJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="iyf-TM-7h4"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rYW-Le-zJr">
+                                        <rect key="frame" x="0.0" y="359.5" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etV-wi-6Ba" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Number 1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="HxL-wF-uLU"/>
+                                                    <constraint firstAttribute="width" constant="50" id="cuv-zl-K5w"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXX-Ip-dtk" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="97.5" y="0.0" width="50" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Number 2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Bsx-yz-uUs"/>
+                                                    <constraint firstAttribute="width" constant="50" id="SIn-Lu-B1X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiE-gV-vZ5" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="194.5" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="iNt-Wj-4am"/>
+                                                    <constraint firstAttribute="width" constant="50" id="jeZ-Ge-4zG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-4C-nET" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="292" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="LlF-vt-Yyb"/>
+                                                    <constraint firstAttribute="height" constant="50" id="UJu-4S-Dao"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gwA-Yg-B9X"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vWV-SN-ywy">
+                                        <rect key="frame" x="0.0" y="479" width="342" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-2L-Xg8" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="iSt-F3-zmL"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="lOX-oh-7Qc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPd-kI-kSi" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="191" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="M7g-pw-thl"/>
+                                                    <constraint firstAttribute="width" constant="50" id="PmV-E9-Hom"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgl-vM-oTI" customClass="JSButton" customModule="Kalculator" customModuleProvider="target">
+                                                <rect key="frame" x="292" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.1617951393" green="0.55408745999999998" blue="0.86918073890000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="pk3-5w-E1T"/>
+                                                    <constraint firstAttribute="width" constant="50" id="q2F-ck-nJz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RDf-fx-767"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fVh-Jn-snn"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="calculatorView"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="p8s-CQ-WHJ" secondAttribute="trailing" constant="16" id="7pP-sP-6tT"/>
+                            <constraint firstItem="p8s-CQ-WHJ" firstAttribute="leading" secondItem="cdZ-d5-5hg" secondAttribute="leadingMargin" constant="16" id="GTm-Ye-OIq"/>
+                            <constraint firstItem="tl0-Go-xhG" firstAttribute="leading" secondItem="cdZ-d5-5hg" secondAttribute="leadingMargin" constant="16" id="Q1K-lB-Kev"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tl0-Go-xhG" secondAttribute="trailing" constant="16" id="Ud1-PW-Bgt"/>
+                            <constraint firstItem="9QH-5k-gDe" firstAttribute="top" secondItem="wQJ-7p-Hmn" secondAttribute="bottom" constant="32" id="YaY-g4-k7J"/>
+                            <constraint firstAttribute="trailing" secondItem="9QH-5k-gDe" secondAttribute="trailing" constant="16" id="bKs-b6-KAF"/>
+                            <constraint firstItem="p8s-CQ-WHJ" firstAttribute="top" secondItem="tl0-Go-xhG" secondAttribute="bottom" constant="32" id="mUW-KE-irc"/>
+                            <constraint firstItem="1mu-YL-JTL" firstAttribute="top" secondItem="p8s-CQ-WHJ" secondAttribute="bottom" constant="32" id="qfO-yN-Hoj"/>
+                            <constraint firstItem="9QH-5k-gDe" firstAttribute="leading" secondItem="cdZ-d5-5hg" secondAttribute="leading" constant="16" id="uPI-JC-nSR"/>
+                            <constraint firstItem="tl0-Go-xhG" firstAttribute="top" secondItem="9QH-5k-gDe" secondAttribute="bottom" constant="128" id="vyR-Bc-hiE"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muP-69-thM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-269.60000000000002" y="-147.97601199400302"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="4og-eD-rYS">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="Edl-qH-1pz">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="FC9-Bm-8f1">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="FKe-2N-ClJ">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="L2K-gf-Wbj">
+            <size key="intrinsicContentSize" width="31" height="33"/>
+        </designable>
+        <designable name="M9U-tM-ll4">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="Vez-cN-DHZ">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="XXX-Ip-dtk">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="XiE-gV-vZ5">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="Yhq-A3-5i9">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="dnG-4C-nET">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="etV-wi-6Ba">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="gVG-7a-f9d">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="hqy-pq-uRs">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="jFY-g4-gD3">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="kPd-kI-kSi">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="kgl-vM-oTI">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="ouv-vH-DBg">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+        <designable name="tl0-Go-xhG">
+            <size key="intrinsicContentSize" width="20" height="44.5"/>
+        </designable>
+        <designable name="vSb-2L-Xg8">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+    </designables>
 </document>
